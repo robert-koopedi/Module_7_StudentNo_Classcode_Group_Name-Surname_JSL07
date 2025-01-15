@@ -30,9 +30,17 @@ document.addEventListener('DOMContentLoaded', function () {
       <p>This is to certify that</p>
       <h1>${studentName}</h1>
       <p>has almost completed the </p>
-      <h4> ${courseName}</h4>
+      <h4> ${courseName} Course</h4>
+      <p>with legendary perseverance and world-class bad-assery for never giving up 🏆</p>
+      <img src="logo.png" alt="Logo" class="modal-image" ">
       <P>${personalMessage}</p>
+      
+      
     `;
+
+    const logoImage = certificateContent.querySelector('.modal-image');
+    logoImage.style.width = '250px'; 
+    logoImage.style.height = 'auto'; 
     
       //  Display the modal
       modal.style.display = 'block';
@@ -43,14 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
       personalMessageInput.value = '';
       if(courseNameInput) courseNameInput.value = '';
     });
+
+    
   
     //  🚨 Close the modal when the close button is clicked
     closeModal.addEventListener('click', function () {
           modal.style.display = 'none';
         });
-      
+
+        closeModal.style.cursor = 'pointer';
+
     });
-  ;
+  
   
 
 
